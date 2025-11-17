@@ -4,8 +4,6 @@ function mean(scores) {
   return sum / scores.length;
 }
 
-// remove this line
-// const mean = require('./notation');
 
 const scores1 = [15, 18, 12, 14, 16];
 const scores2 = [10, 20, 15, 13, 17, 19];
