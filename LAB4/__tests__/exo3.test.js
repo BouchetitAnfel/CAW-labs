@@ -1,6 +1,7 @@
 const fs = require('fs');
 jest.mock('fs');
 
+//hard one
 describe('readFile function', () => {
   const { readFile } = require('../exo3');
 
@@ -26,10 +27,9 @@ describe('running exo3.js directly with missing argument', () => {
   });
 
   test('should call console.error and process.exit', () => {
-    // simulate running script directly
     jest.isolateModules(() => {
       process.argv = ['node', 'exo3.js'];
-      require('../exo3'); // this will trigger the code in "if (require.main === module)"
+      require('../exo3');
     });
 
     expect(mockError).toHaveBeenCalledWith('Usage: node exo3.js <filename>');

@@ -1,5 +1,4 @@
-// __tests__/calculator.test.js
-const math = require('../calculator'); // go up one folder to import calculator.js
+const math = require('../calculator'); 
 
 describe("Calculator tests", () => {
   
