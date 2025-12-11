@@ -1,0 +1,100 @@
+.task-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #2c3e50;
+  flex: 1;
+  word-break: break-word;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #e74c3c;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #fee;
+}
+
+.task-description {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.move-btn {
+  flex: 1;
+  padding: 6px 12px;
+  border: 1px solid #3498db;
+  background: white;
+  color: #3498db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.move-btn:hover {
+  background: #3498db;
+  color: white;
+}
+
+.move-btn.prev {
+  border-color: #95a5a6;
+  color: #95a5a6;
+}
+
+.move-btn.prev:hover {
+  background: #95a5a6;
+  color: white;
+}
